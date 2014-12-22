@@ -1,0 +1,14 @@
+
+
+set(HDRS
+	${HDRS}
+	${CMAKE_CURRENT_SOURCE_DIR}/include/parser.h
+	${CMAKE_CURRENT_SOURCE_DIR}/picojson.h
+	PARENT_SCOPE
+)
+ 
+set(SRCS
+	${SRCS}
+	${CMAKE_CURRENT_SOURCE_DIR}/parser.cpp
+	PARENT_SCOPE
+)
