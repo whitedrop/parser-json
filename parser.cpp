@@ -57,7 +57,8 @@ namespace Parser {
 			dim.x = std::stoi(obj2["dimX"].to_str());
 			dim.y = std::stoi(obj2["dimY"].to_str());
 			dim.z = std::stoi(obj2["dimZ"].to_str());
-
+			if(!obj2["material"].is<picojson::null>())
+				ent.material = obj2["material"].to_str();
 	        ent.id = 	obj2["id"].to_str();
 	        ent.mesh = 	obj2["mesh"].to_str();
 	        ent.position = pos;
