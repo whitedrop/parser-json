@@ -1,15 +1,23 @@
+/**
+ * @file parser.h
+ * @page ParserPage
+ */
+
 #include "./include/parser.h"
 #include "picojson.h"
 #include <iostream>
 #include <fstream>
 #include <string>
 using namespace picojson;
+/**
+ * @namespace Parser
+ */
 namespace Parser {
 	
 	std::string contents;
 	/**
-	* \brief read a map file
-	* \param mapFile the absolute or relative path to the map-file.map
+	* @brief read a map file
+	* @param mapFile the absolute or relative path to the map-file.map
 	*/
 	void input(std::string mapFile)
 	{
@@ -27,8 +35,10 @@ namespace Parser {
 	}
 
 	/**
-	* \brief start building up the world
-	*/
+	 * @brief create a Parser::World object
+	 * @details so parse json
+	 * @return the world
+	 */
 	World load()
 	{
 		World world;
